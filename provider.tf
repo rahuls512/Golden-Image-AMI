@@ -8,7 +8,7 @@ terraform {
   }
 
   backend "s3" {
-    bucket         = "rs-terraform-statefile"
+    bucket         = "rs-terraform-statefile01"
     key            = "terraform-statefile"
     region         = "ap-southeast-1"
     role_arn       = "arn:aws:iam::640111764884:role/stsassume-role"
