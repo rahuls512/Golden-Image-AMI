@@ -6,7 +6,7 @@ terraform {
       version = "~>5.0.0"
     }
   }
-
+ # Define Terraform Backend for S3 and dynamodb table
   backend "s3" {
     bucket         = "rs-terraform-statefile01"
     key            = "terraform-statefile"
