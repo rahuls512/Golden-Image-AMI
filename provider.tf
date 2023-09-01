@@ -10,14 +10,14 @@ terraform {
   backend "s3" {
     bucket         = "rs-terraform-statefile"
     key            = "terraform-statefile"
-    region         = "ap-south-1"
+    region         = "ap-southeast-1"
     role_arn       = "arn:aws:iam::640111764884:role/stsassume-role"
     dynamodb_table = "rs-terraform-statetable"
   }
 }
 
 provider "aws" {
-  region = "ap-south-1"
+  region = "ap-southeast-1"
   assume_role {
     role_arn     = "arn:aws:iam::640111764884:role/stsassume-role"
     session_name = "terraform-sts"
