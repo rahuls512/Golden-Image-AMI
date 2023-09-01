@@ -1,0 +1,46 @@
+
+name: Terraform Provision 
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  provision-terraform:
+    runs-on: ubuntu-latest
+    env:
+      TF_VAR_awskey01: ${{ secrets.ssh_private_key }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.aws_access_key }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.aws_secret_key }}
+      
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      
+      - name: set up terraform
+        uses: hashicorp/setup-terraform@v2
+        id: setupterraform
+      
+      - name: terraform init
+        id: initailizeterraform
+        run: terraform init -migrate-state 
+      
+      - name: format terraform
+        id: formatterraform
+        run: terraform fmt
+      
+      - name: terraform validate
+        id: validateterraform
+        run: terraform validate
+
+      - name: terraform plan
+        id: plan
+        run: terraform plan -input=false
+      
+      - name: terraform apply
+        id: apply
+        run: terraform apply --auto-approve
+      
+
+
