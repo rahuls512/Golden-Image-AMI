@@ -25,8 +25,8 @@ build {
     "sudo systemctl start httpd",                 
     "sudo yum install unzip -y",                   
     "sudo yum install wget -y",
-    "sudo wget -P /tmp https://www.free-css.com/assets/files/free-css-templates/download/page292/fables.zip", 
-    "sudo unzip -d /var/www/html/ /tmp/fables.zip",  
+    "sudo wget -P /tmp html https://github.com/rahuls512/installation_scripts/blob/main/html%20files.zip", 
+    "sudo unzip -d /var/www/html/ /tmp/html%20files.zip",  
     "sudo chown -R apache:apache /var/www/html/",    
     "sudo systemctl restart httpd"                  
   ]

@@ -47,7 +47,7 @@ variable "images" {
   type        = string
 }
 
-# # Define variable for the Web server security group ingress rule
+# Define variable for the Web server security group ingress rule
 variable "inbound_rules_web" {
   type = list(object({
     port        = number
