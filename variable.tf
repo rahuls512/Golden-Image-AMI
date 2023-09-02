@@ -47,6 +47,10 @@ variable "images" {
   type        = string
 }
 
+variable "awskey01" {
+  type = string
+}
+
 ### Web server security group ingress rule ###
 variable "inbound_rules_web" {
   type = list(object({
