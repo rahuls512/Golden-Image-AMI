@@ -26,7 +26,7 @@ variable "vpc_name" {
   type        = string
   description = "Name for the vpc"
 }
-### Web Server ###
+# Define variable for the web server
 variable "web_server_name" {
   description = "name for the instance created as web server"
   type        = string
@@ -47,13 +47,7 @@ variable "images" {
   type        = string
 }
 
-variable "awskey01" {
-  type        = string
-  default     = "~/../Downloads/awskey01.pem"
-}
-
-
-### Web server security group ingress rule ###
+# # Define variable for the Web server security group ingress rule
 variable "inbound_rules_web" {
   type = list(object({
     port        = number
