@@ -2,6 +2,8 @@
 
 Building a Golden Image (AMI) using Packer for an Apache Webserver, and integrating GitHub Actions with Terraform for infrastructure automation, provides a highly efficient, scalable, and easily manageable approach for deploying and maintaining web applications.
 
+https://github.com/rahuls512/Golden-Image-AMI/blob/main/Golden%20Image.png
+
 Prerequisites:
 1.Git
 2.GitHub
