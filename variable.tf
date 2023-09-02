@@ -48,8 +48,10 @@ variable "images" {
 }
 
 variable "awskey01" {
-  type = string
+  type        = string
+  default     = "~/../Downloads/awskey01.pem"
 }
+
 
 ### Web server security group ingress rule ###
 variable "inbound_rules_web" {
